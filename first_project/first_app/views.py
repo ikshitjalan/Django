@@ -40,7 +40,8 @@ def users(request):
     return render(request,'first_app/user.html',{'form':form})
 
 def other(request):
-    return render(request,'first_app/other.html')
+    context_dict = {'text':'Hello World','number':200}
+    return render(request,'first_app/other.html',context_dict)
 
 def relative(request):
     return render(request,'first_app/relative_url_templates.html')
